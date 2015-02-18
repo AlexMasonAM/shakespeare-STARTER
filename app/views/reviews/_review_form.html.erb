@@ -1,0 +1,6 @@
+<%= form_for review do |f| %>
+  <%= f.text_field :body %>
+  <%= f.hidden_field :book_id, hidden: true %>
+  <%= f.hidden_field :user_id, hidden: true %>
+  <%= f.submit %>
+<% end %>

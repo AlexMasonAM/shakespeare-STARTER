@@ -1,0 +1,4 @@
+#Shakespeare
+
+This is the starter code for WDI DTLA Unobtrusive JS lesson.
+

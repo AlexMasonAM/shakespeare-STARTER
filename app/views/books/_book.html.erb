@@ -1,0 +1,14 @@
+<div class="card" id="book-<%= book.id %>">
+  <div class="card-image">
+    <%= image_tag book.cover_url %>
+  </div>
+  <div class="card-header">
+    <%= book.title %>
+    <p><em>by <%= book.author %></em></p>
+  </div>
+  <div class="card-copy">
+    <p><%= book.one_liner %></p>
+    <p class="review-count"><%= book.reviews.count %> reviews</p>
+    <p><%= button_to "Add your thoughts", new_user_book_review_path(book_id: book, user_id: current_user), method: :get %></p>
+  </div>
+</div>
