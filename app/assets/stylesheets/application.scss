@@ -15,3 +15,13 @@
 @import 'bourbon';
 @import 'base/base';
 @import 'refills/cards';
+@import 'font-awesome';
+
+.fa-star {
+  color:  $medium-gray;
+}
+
+
+.favorited {
+  color: gold;
+}

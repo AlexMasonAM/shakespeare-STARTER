@@ -1,5 +1,5 @@
 <h1>READ ALL THE BOOKS!</h1>
-
+<%= fa_icon 'book 3x' %>
 <div class='cards'>
   <% @books.each do |book| %>
     <%= render partial: 'book', locals: { book: book } %>

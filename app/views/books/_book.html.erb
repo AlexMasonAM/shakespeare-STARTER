@@ -9,6 +9,13 @@
   <div class="card-copy">
     <p><%= book.one_liner %></p>
     <p class="review-count"><%= book.reviews.count %> reviews</p>
-    <p><%= button_to "Add your thoughts", new_user_book_review_path(book_id: book, user_id: current_user), method: :get %></p>
+<!--     <p><%= button_to "Add your thoughts", new_user_book_review_path(book_id: book, user_id: current_user), method: :get %></p> -->
+    <p>
+      <% if book.favorited_users.include?(current_user) %>
+        <%= fa_icon 'star 2x', class: 'favorited' %>
+      <% else %>  
+        <%= link_to fa_icon('star 2x'), book_favorites_path(book_id: book.id, user_id: current_user.id), method: :post %>
+      <% end %>
+    </p>
   </div>
 </div>
